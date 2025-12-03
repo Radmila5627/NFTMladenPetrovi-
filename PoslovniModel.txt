@@ -1,0 +1,1 @@
+Poslovni model uključuje mintanje NFT-ova, nagrađivanje korisnika MPT tokenima i podršku kroz likvidnost MPT/USDC.

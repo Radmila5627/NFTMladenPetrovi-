@@ -1,0 +1,1 @@
+// Ovdje se nalazi Solidity pametni ugovor za NFTMladenPetrović

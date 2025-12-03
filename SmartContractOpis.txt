@@ -1,0 +1,1 @@
+Opis pametnog ugovora: omogućuje mintanje NFT-ova, dodjelu MPT tokena i upravljanje trezorskim sredstvima.
