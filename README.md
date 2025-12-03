@@ -1,5 +1,5 @@
 
-# NFTMladenPetrović
+# NFT MladenPetrović
 
 Ova stranica prikazuje 3 NFT-a iz kolekcije "NFTMladenPetrović", koji su hostani putem IPFS-a.
 
