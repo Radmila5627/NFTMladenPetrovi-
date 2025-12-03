@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>NFTMladenPetrović Mintanje</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background: #f0f0f0;
+    }
+    .nft-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+    .nft {
+      border: 2px solid #ccc;
+      padding: 10px;
+      background: white;
+      border-radius: 12px;
+    }
+    img {
+      width: 250px;
+      border-radius: 8px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    h1 {
+      margin-top: 40px;
+    }
+    #wallet-address {
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>NFT Mladen Petrović</h1>
+  <p>Mintaj 1 NFT za 0.05 BNB i primi 10.000 MPMC tokena</p>
+
+  <div class="nft-container">
+    <div class="nft">
+      <img src="https://ipfs.io/ipfs/bafybeibwu4pzuvfahqkz3qgn5nqqob4mkbj3c52vklrokrefvfbtd3vnjq/1.png" alt="NFT 1">
+      <p>Slika 1</p>
+    </div>
+    <div class="nft">
+      <img src="https://ipfs.io/ipfs/bafybeibwu4pzuvfahqkz3qgn5nqqob4mkbj3c52vklrokrefvfbtd3vnjq/2.png" alt="NFT 2">
+      <p>Slika 2</p>
+    </div>
+    <div class="nft">
+      <img src="https://ipfs.io/ipfs/bafybeibwu4pzuvfahqkz3qgn5nqqob4mkbj3c52vklrokrefvfbtd3vnjq/3.png" alt="NFT 3">
+      <p>Slika 3</p>
+    </div>
+  </div>
+
+  <button onclick="mintNFT()">🔗 Poveži se i Mintaj NFT</button>
+  <p id="wallet-address"></p>
+
+  <script>
+    const nftContractAddress = "0xAED2fFb38b3C8C57A7d60B69B326b32aD446B946"; // NFTMladenPetrovic
+    const mintPrice = "0.05"; // BNB
+    const chainIdBSC = "0x38"; // BNB mainnet
+
+    const abi = [
+      {
+        "inputs": [],
+        "name": "mint",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+      }
+    ];
+
+    async function mintNFT() {
+      if (typeof window.ethereum === 'undefined') {
+        alert("MetaMask nije pronađen!");
+        return;
+      }
+
+      const web3 = new Web3(window.ethereum);
+      await ethereum.request({ method: 'eth_requestAccounts' });
+      const accounts = await web3.e
